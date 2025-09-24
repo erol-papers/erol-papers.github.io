@@ -8,11 +8,11 @@
 <! ########################################################################### >
    <style type="text/css">
       
-     body {   font-family: sans-serif;    background-color: #888;       }
+     body {   font-family: serif;    background-color: #888;       }
      body a {  color: #333;   }
       
       #container {
-          margin: 40px auto;   padding: 50px;  width: 900px;
+          margin: 40px auto;   padding: 50px;  width: 1050px;
           background-color: #eee;          
           position: relative;
       }
@@ -35,15 +35,42 @@
 
 <! ########################################################################### >
 <! ########################################################################### >
+
+<style>
+    .divider {
+      width: 100%;                  /* shorter line */
+      margin: 20px auto;           /* center it */
+      border: none;                /* remove default hr */
+      height: 2px;                 /* thickness */
+      background: linear-gradient(to right, #8e44ad, #9b59b6, #be2edd);
+      border-radius: 1px;          /* smooth edges */
+    }
+  </style>
+
+<! ########################################################################### >
+<! ########################################################################### >
+
+<style>
+    .circle-img {
+      width: 200px;        /* set size */
+      height: 200px;
+      border-radius: 50%;  /* makes it circular */
+      object-fit: cover;   /* ensures image fits well */
+      border: 1px solid gray; /* optional border */
+    }
+  </style>
+
+<! ########################################################################### >
+<! ########################################################################### >
 <body>
     <div id="container">
-    <div id="photo"> <img style="width: 92px; height: auto;" src="page_files/erol-gray.png"> </div>
+    <div id="photo"> <img style="width: 92px; height: auto;" src="page_files/erol-gray.png" class="circle-img"> </div>
  
       <div class="info"> 
  	 <img style="width: 400px; height: auto;"  src="page_files/logoMACCS.png"> 
          <img style="width: 227px; height: auto;"  src="page_files/tw.jpg">  &nbsp; <br>
 	 <font face="courier"> erol[dot]ozgur[at]sigma-clermont[dot]fr </font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-         <span class="link"><a href="./vacancy.html">Vacancy</a></span> <br>  
+         <span class="link"><a href="./vacancy.html" target="_blank">Vacancy</a></span> <br>  
       </div>
 
 
@@ -53,7 +80,7 @@
 
 <! ########################################################################### >
 <! ########################################################################### >
-    <div class="section"> <h3>Publications</h3>
+    <br> <br> <hr class="divider">
 <! ########################################################################### >
 <! ########################################################################### >
 	<! JOURNALS >
@@ -63,7 +90,7 @@
 	<div class="ref">
 	<span class="title">Reconstructing a Sphere and the Camera Focal Length from a Single View by Fitting Planes</span><br>
 	<span class="venue">International Journal of Computer Vision, special issue: selected papers from BMVC 2024, accepted September 2025. &nbsp;</span>
-	<span class="link"><a href="./papers/ijcv25.pdf">pdf</a> &nbsp; </span> <br>
+	<span class="link"><a href="./papers/ijcv25.pdf" target="_blank">pdf</a> &nbsp; </span> <br>
 	<span class="authors">E. Ozgur, M. Alkhatib, Y. Mezouar, A. Bartoli.</span><br>
 	</div>
 
@@ -71,8 +98,8 @@
 	<div class="ref">
 	<span class="title">LARLUS: Laparoscopic Augmented Reality from Laparoscopic Ultrasound</span><br>
 	<span class="venue">International Journal of Computer Assisted Radiology and Surgery, (IJCARS-IPCAI) 2024. &nbsp;</span>
-	<span class="link"><a href="./papers/IJCARS-IPCAI-2024.pdf">pdf</a> &nbsp; </span> 
-	<span class="link"><a href="./videos/IJCARS-IPCAI-2024-LARLUS.m4v">video</a></span> <br>	
+	<span class="link"><a href="./papers/IJCARS-IPCAI-2024.pdf" target="_blank">pdf</a> &nbsp; </span> 
+	<span class="link"><a href="./videos/IJCARS-IPCAI-2024-LARLUS.m4v" target="_blank">video</a></span> <br>	
 	<span class="authors">M. M. Kalantari, E. Ozgur, M. Alkhatib, E. Buc, B. Le Roy, R. Modrzejewski, Y. Mezouar, A. Bartoli.</span><br>
 	</div>
 
@@ -80,9 +107,9 @@
 	<div class="ref">
 	<span class="title">Lattice-Based Shape Tracking and Servoing of Elastic Objects</span><br>
 	<span class="venue">IEEE Transactions on Robotics, vol. 40, pp. 364-381, (TRO-ICRA) 2024.  &nbsp;</span>
-	<span class="link"><a href="./papers/LARAP-2023.pdf">pdf</a> &nbsp; </span> 
-	<span class="link"><a href="./videos/Latte_tracking_shoe_sole.mp4">tracking-video</a> &nbsp; </span> 
-	<span class="link"><a href="./videos/LatteSS.mp4">servoing-video</a></span> <br>	
+	<span class="link"><a href="./papers/LARAP-2023.pdf" target="_blank">pdf</a> &nbsp; </span> 
+	<span class="link"><a href="./videos/Latte_tracking_shoe_sole.mp4" target="_blank">tracking-video</a> &nbsp; </span> 
+	<span class="link"><a href="./videos/LatteSS.mp4" target="_blank">servoing-video</a></span> <br>	
 	<span class="authors">M. Shetab-Bushehri, M. Aranda, Y. Mezouar, E. Ozgur.</span><br>
 	</div>
 
@@ -90,8 +117,8 @@
 	<div class="ref">
 	<span class="title">ROBUSfT: Robust Real-Time Shape-from-Template, a C++ Library</span><br>
 	<span class="venue">Image and Vision Computing, vol. 141, 2024. &nbsp;</span>
-	<span class="link"><a href="./papers/ROBUSfT-IVC2023.pdf">pdf</a> &nbsp; </span> 
-	<span class="link"><a href="./videos/ROBUSfT_video.mp4">video</a></span> <br>
+	<span class="link"><a href="./papers/ROBUSfT-IVC2023.pdf" target="_blank">pdf</a> &nbsp; </span> 
+	<span class="link"><a href="./videos/ROBUSfT_video.mp4" target="_blank">video</a></span> <br>
 	<span class="authors">M. Shetab-Bushehri, M. Aranda, E. Ozgur, Y. Mezouar, A. Bartoli.</span><br>
 	</div>
 
@@ -99,16 +126,16 @@
 	<div class="ref">
 	<span class="title">Kinematic screws and dual quaternion based motion controllers</span><br>
 	<span class="venue">Control Engineering Practice, 2022. &nbsp;</span>
-	<span class="link"><a href="./papers/cep22.pdf">pdf</a> &nbsp; </span> 
-	<span class="link"><a href="./videos/cep22-video.mp4">video</a></span> <br>	
+	<span class="link"><a href="./papers/cep22.pdf" target="_blank">pdf</a> &nbsp; </span> 
+	<span class="link"><a href="./videos/cep22-video.mp4" target="_blank">video</a></span> <br>	
 	<span class="authors">H. Abaunza, R. Chandra, E.Ozgur, J.A. Corrales, Y. Mezouar.</span><br>
 	</div>
 
 	<div class="ref">
 	<span class="title">As-Rigid-As-Possible Shape Servoing</span><br>
 	<span class="venue">IEEE Robotics and Automation Letters, (RAL-ICRA) 2022. &nbsp;</span>
-	<span class="link"><a href="./papers/ralicra22.pdf">pdf</a> &nbsp; </span> 
-	<span class="link"><a href="./videos/ralicra22-video.mp4">video</a></span> <br>	
+	<span class="link"><a href="./papers/ralicra22.pdf" target="_blank">pdf</a> &nbsp; </span> 
+	<span class="link"><a href="./videos/ralicra22-video.mp4" target="_blank">video</a></span> <br>	
 	<span class="authors">M. Shetab-Bushehri, M. Aranda, Y. Mezouar, E.Ozgur.</span><br>
 	</div>
 
@@ -116,16 +143,15 @@
 	<div class="ref">
 	<span class="title">A Case Series Study of Augmented Reality in Liver Laparoscopic Resection with a Deformable Preoperative Model</span><br>
 	<span class="venue">Surgical Endoscopy, 2020. &nbsp;</span>
-	<span class="link"><a href="./papers/surgical-endoscopy20.pdf">pdf</a> &nbsp; </span> <br>
-	<span class="authors">B. Le Roy, M. Abdallah, Y. Espinel, L. Calvet, B. Pereira, 
-E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
+	<span class="link"><a href="./papers/surgical-endoscopy20.pdf" target="_blank">pdf</a> &nbsp; </span> <br>
+	<span class="authors">B. Le Roy, M. Abdallah, Y. Espinel, L. Calvet, B. Pereira, E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	</div>
 
 
 	<div class="ref">
 	<span class="title">Combining Visual Cues with Interactions for 3D-2D Registration in Liver Laparoscopy</span><br>
 	<span class="venue">Annals of Biomedical Engineering, Vol. 48, pp. 1712-1727, 2020. &nbsp;</span>
-	<span class="link"><a href="./papers/abme20.pdf">pdf</a> &nbsp; </span> <br>
+	<span class="link"><a href="./papers/abme20.pdf" target="_blank">pdf</a> &nbsp; </span> <br>
 	<span class="authors">Y. Espinel, E. Ozgur, L. Calvet, B. Le Roy, E. Buc, A. Bartoli.</span><br>
 	</div>
 
@@ -133,8 +159,8 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<div class="ref">
 	<span class="title">Augmented Reality Guidance in Laparoscopic Hepatectomy with Deformable Semi-automatic Computed Tomography Alignment</span><br>
 	<span class="venue">Journal of Visceral Surgery, 2019. &nbsp;</span>
-	<span class="link"><a href="./papers/jvs19.pdf">pdf</a> &nbsp; </span> 
-	<span class="link"><a href="https://www.youtube.com/watch?v=Lp0HtOYdZ7A">video</a></span><br>
+	<span class="link"><a href="./papers/jvs19.pdf" target="_blank">pdf</a> &nbsp; </span> 
+	<span class="link"><a href="https://www.youtube.com/watch?v=Lp0HtOYdZ7A" target="_blank">video</a></span><br>
 	<span class="authors">B. Le Roy, E. Ozgur, B. Koo, E. Buc, A. Bartoli.</span><br>
 	</div>
 
@@ -142,7 +168,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<div class="ref">
 	<span class="title">Preoperative Liver Registration for Augmented Monocular Laparoscopy using Backward-Forward Biomechanical Simulation</span><br>
 	<span class="venue">International Journal of Computer Assisted Radiology and Surgery, 2018. &nbsp;</span>
-	<span class="link"><a href="./papers/ijcars18.pdf">pdf</a></span><br> 
+	<span class="link"><a href="./papers/ijcars18.pdf" target="_blank">pdf</a></span><br> 
 	<span class="authors">E. Ozgur, B. Koo, B. Le Roy, E. Buc,  A. Bartoli.</span><br>
 	</div>
 
@@ -150,10 +176,10 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<div class="ref">
 	<span class="title">Parking Objects by Pushing using Uncalibrated Visual Servoing</span><br>
 	<span class="venue">Autonomous Robots, 2018. &nbsp;</span> 
-	<span class="link"><a href="./papers/auro18.pdf">pdf</a> &nbsp; </span>    
+	<span class="link"><a href="./papers/auro18.pdf" target="_blank">pdf</a> &nbsp; </span>    
 <!--	<span class="link"><a href="./papers/auro18.pdf">pdf</a></span><br>   -->
-	<span class="link"><a href="./videos/auro18-video-manipulator.avi">video1</a> &nbsp; </span>
-	<span class="link"><a href="./videos/auro18-video-mobile.avi">video2</a> <br> </span>
+	<span class="link"><a href="./videos/auro18-video-manipulator.avi" target="_blank">video1</a> &nbsp; </span>
+	<span class="link"><a href="./videos/auro18-video-mobile.avi" target="_blank">video2</a> <br> </span>
 	<span class="authors">G. Lopez-Nicolas, E. Ozgur, Y. Mezouar.</span>
 	</div>
 
@@ -161,7 +187,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<div class="ref">
 	<span class="title">Preliminary Trial of Augmented Reality Performed on a Laparoscopic Left Hepatectomy</span><br>
 	<span class="venue">Surgical Endoscopy, 2017. &nbsp;</span>
-	<span class="link"><a href="./papers/surgical-endoscopy17.pdf">pdf</a></span><br> 
+	<span class="link"><a href="./papers/surgical-endoscopy17.pdf" target="_blank">pdf</a></span><br> 
 	<span class="authors">P. Phutane, E. Buc, K. Poirot, E. Ozgur, D. Pezet, A. Bartoli, B. Le Roy.</span><br>
 	</div>
 
@@ -169,14 +195,14 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<div class="ref">
 	<span class="title">A Study on Dexterous Grasps via Parallel Manipulation Analogy</span><br>
 	<span class="venue">Journal of Intelligent and Robotic Systems, Vol. 87, Issue 1, pp. 3-14, 2017. &nbsp;</span>
-	<span class="link"><a href="./papers/jirs17.pdf">pdf</a></span><br>
+	<span class="link"><a href="./papers/jirs17.pdf" target="_blank">pdf</a></span><br>
 	<span class="authors">E. Ozgur, G. Gogu, Y. Mezouar.</span><br>
 	</div>
 
 	<div class="ref">
 	<span class="title">Particle-SfT: a Provably-Convergent, Fast Shape-from-Template Algorithm</span><br>
 	<span class="venue">International Journal of Computer Vision, Vol. 123, Issue 2, pp. 184-205, 2017. &nbsp;</span>
-	<span class="link"><a href="./papers/ijcv16.pdf">pdf</a></span><br>
+	<span class="link"><a href="./papers/ijcv16.pdf" target="_blank">pdf</a></span><br>
 	<span class="authors">E. Ozgur, A. Bartoli.</span><br>
 	</div>
 
@@ -184,7 +210,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<div class="ref">
 	<span class="title">Minimal Representation for the Control of Parallel Robots via Leg Observation <br> Considering a Hidden Robot Model </span><br>
 	<span class="venue">Mechanism and Machine Theory, Vol. 106, pp. 115-147, 2016. &nbsp;</span>
-	<span class="link"><a href="./papers/mmt16.pdf">pdf</a></span><br>
+	<span class="link"><a href="./papers/mmt16.pdf" target="_blank">pdf</a></span><br>
 	<span class="authors">S. Briot, V. Rosenzveig, P. Martinet, E. Ozgur, N. Bouton.</span><br>
 	</div>
 
@@ -192,8 +218,8 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<div class="ref">
 	<span class="title">Kinematic Modeling and Control of a Robot Arm using Unit Dual Quaternions </span><br>
 	<span class="venue">Robotics and Autonomous Systems, Vol. 77, pp. 66-73, 2016. &nbsp;</span>
-	<span class="link"><a href="./papers/ras16.pdf">pdf</a> &nbsp; </span>
-        <span class="link"> <a href="./code/udq-robotArm.zip">code</a> (matlab/octave)</span><br>
+	<span class="link"><a href="./papers/ras16.pdf" target="_blank">pdf</a> &nbsp; </span>
+        <span class="link"> <a href="./code/udq-robotArm.zip" target="_blank">code</a> (matlab/octave)</span><br>
 	<span class="authors">E. Ozgur, Y. Mezouar.</span><br>
 	</div>
 
@@ -201,7 +227,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<div class="ref">
 	<span class="title">Linear Dynamic Modeling of Parallel Kinematic Manipulators from Observable Kinematic Elements</span><br>
 	<span class="venue">Mechanism and Machine Theory, Vol. 69, pp. 73-89, 2013. &nbsp;</span>
-	<span class="link"><a href="./papers/mmt13.pdf">pdf</a></span><br>
+	<span class="link"><a href="./papers/mmt13.pdf" target="_blank">pdf</a></span><br>
 	<span class="authors">E. Ozgur, N. Andreff, P. Martinet.</span>
 	</div>           
 
@@ -210,15 +236,18 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<div class="ref">
 	<span class="title">3D Object Recognition using Invariants of 2D Projection Curves</span><br>
 	<span class="venue">Pattern Analysis and Applications, Vol. 13, Issue 4, pp. 451-468, 2010. &nbsp;</span>
-	<span class="link"><a href="./papers/paa10.pdf">pdf</a></span><br>
+	<span class="link"><a href="./papers/paa10.pdf" target="_blank">pdf</a></span><br>
 	<span class="authors">M. Unel, O. Soldea, E. Ozgur, A. Bassa.</span>
 	</div>           
                 
 
       </div> <! end of journals subsection >
-     <br>
+     
 	
 <! ########################################################################### >
+  <br> <br> <hr class="divider">
+<! ########################################################################### >
+
       <! CONFERENCE PAPERS >
       <div class="subsection"> <h3><small>Conference and Workshop Papers</small></h3>
 
@@ -227,16 +256,16 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Hidden Tumor Visualization in Augmented Monocular Liver Laparoscopy</span><br>
 	<span class="authors"> K. Hanifati, M. Alkhatib, E. Ozgur, E. Buc, B. Le Roy, H. Rante, Y. Mezouar, A. Bartoli.</span><br>
 	<span class="venue"> AE-CAI - Joint AE-CAI | CARE | OR 2.0 Workshop at MICCAI, 2025. &nbsp;</span>
-	<span class="link"><a href="./papers/miccai-workshop25.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/miccai-workshop25.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
       
       	<div class="ref">
 	<span class="title">Stronger Together: Registering Preoperative Imagery, LUS, and MIS Liver Images</span><br>
-	<span class="authors"> M. M. Kalantari, E. Ozgur, M. Alkhatib, N. Rabbani, Y. Espinel, R. Modrzejewski, B. Le Roy, E. Buc, Y. Mezouar, A. Bartoli.</span>
-	<span class="venue">&nbsp;&nbsp; MICCAI 2025. &nbsp;</span>
-	<span class="link"><a href="./papers/miccai25.pdf">pdf</a></span>
+	<span class="authors"> M. M. Kalantari, E. Ozgur, M. Alkhatib, N. Rabbani, Y. Espinel, R. Modrzejewski, B. Le Roy, E. Buc, Y. Mezouar, A. Bartoli.</span><br>
+	<span class="venue">MICCAI 2025. &nbsp;</span>
+	<span class="link"><a href="./papers/miccai25.pdf" target="_blank">pdf</a></span>
 	</div>
 
       
@@ -245,16 +274,16 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Reconstructing Spheres by Fitting Planes</span><br>
 	<span class="authors">E. Ozgur, M. Alkhatib, Y. Mezouar, A. Bartoli.</span>
 	<span class="venue">&nbsp;&nbsp; BMVC 2024. &nbsp;</span>
-	<span class="link"><a href="./papers/bmvc24.pdf">pdf</a> &nbsp; </span> <br> 	
+	<span class="link"><a href="./papers/bmvc24.pdf" target="_blank">pdf</a> &nbsp; </span> <br> 	
 	</div>
 
 
 	<div class="ref">
 	<span class="title">LARLUS: Laparoscopic Augmented Reality from Laparoscopic Ultrasound</span><br>
 	<span class="authors">M. M. Kalantari, E. Ozgur, M. Alkhatib, E. Buc, B. Le Roy, R. Modrzejewski, Y. Mezouar, A. Bartoli.</span>
-	<span class="venue">&nbsp;&nbsp; IPCAI 2024. &nbsp;</span>
-	<span class="link"><a href="./papers/IJCARS-IPCAI-2024.pdf">pdf</a> &nbsp; </span> 
-	<span class="link"><a href="./videos/IJCARS-IPCAI-2024-LARLUS.m4v">video</a></span> <br>	
+	<span class="venue">&nbsp; &nbsp; IPCAI 2024. &nbsp;</span>
+	<span class="link"><a href="./papers/IJCARS-IPCAI-2024.pdf" target="_blank">pdf</a> &nbsp; </span> 
+	<span class="link"><a href="./videos/IJCARS-IPCAI-2024-LARLUS.m4v" target="_blank">video</a></span> <br>	
 	</div>
 
 
@@ -262,15 +291,15 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Lattice-Based Shape Tracking and Servoing of Elastic Objects</span><br>
 	<span class="authors">M. Shetab-Bushehri, M. Aranda, Y. Mezouar, E. Ozgur.</span>
 	<span class="venue">&nbsp; TRO-ICRA 2024. &nbsp;</span>
-	<span class="link"><a href="./papers/LARAP-2023.pdf">pdf</a> &nbsp; </span> <br>
+	<span class="link"><a href="./papers/LARAP-2023.pdf" target="_blank">pdf</a> &nbsp; </span> <br>
 	</div>
 
 	<div class="ref">
 	<span class="title">Markerless Ultrasound Probe Pose Estimation in Mini-Invasive Surgery</span><br>
-	<span class="authors">M.M. Kalantari, E. Ozgur, M. Alkhatib, E. Buc, B. Le Roy, R. Modrzejewski, Y. Mezouar, A. Bartoli.</span> <br>
-	<span class="venue">ICRA 2024. &nbsp;</span>
-	<span class="link"><a href="./papers/ICRA24s.pdf">pdf</a> &nbsp; </span> 
-	<span class="link"><a href="./videos/ICRA24s-video.mp4">video</a></span> <br>	
+	<span class="authors">M.M. Kalantari, E. Ozgur, M. Alkhatib, E. Buc, B. Le Roy, R. Modrzejewski, Y. Mezouar, A. Bartoli.</span> 
+	<span class="venue">&nbsp; &nbsp; ICRA 2024. &nbsp;</span>
+	<span class="link"><a href="./papers/ICRA24s.pdf" target="_blank">pdf</a> &nbsp; </span> 
+	<span class="link"><a href="./videos/ICRA24s-video.mp4" target="_blank">video</a></span> <br>	
 	</div>
 
 
@@ -278,7 +307,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Ofﬂine Reinforcement Learning for Shape Control of Deformable Linear Objects from Limited Real Data</span><br>
 	<span class="authors">R. Laezza, M. Shetab-Bushehri, E. Ozgur, Y. Mezouar, Y. Karayiannidis.</span> <br>
 	<span class="venue">3rd Workshop on Representing and Manipulating Deformable Objects, ICRA 2023. &nbsp;</span>
-	<span class="link"><a href="./papers/icra23.pdf">pdf</a> &nbsp; </span> <br>	
+	<span class="link"><a href="./papers/icra23.pdf" target="_blank">pdf</a> &nbsp; </span> <br>	
 	</div>
 
 
@@ -286,16 +315,16 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Optimal Shape Servoing with Task-focused Convergence Constraints</span><br>
 	<span class="authors">V. Giraud, M. Padrin, M. Shetab-Bushehri, C. Bouzgarrou, Y. Mezouar, E.Ozgur.</span>
 	<span class="venue">&nbsp;&nbsp; IROS 2022. &nbsp;</span>
-	<span class="link"><a href="./papers/iros22.pdf">pdf</a> &nbsp; </span> 	
-	<span class="link"><a href="./videos/iros22-video.mp4">video</a></span> <br>
+	<span class="link"><a href="./papers/iros22.pdf" target="_blank">pdf</a> &nbsp; </span> 	
+	<span class="link"><a href="./videos/iros22-video.mp4" target="_blank">video</a></span> <br>
 	</div>
 
 	<div class="ref">
 	<span class="title">As-Rigid-As-Possible Shape Servoing</span><br>
 	<span class="authors">M. Shetab-Bushehri, M. Aranda, Y. Mezouar, E.Ozgur.</span>
 	<span class="venue">&nbsp;&nbsp; RAL-ICRA 2022. &nbsp;</span>
-	<span class="link"><a href="./papers/ralicra22.pdf">pdf</a> &nbsp; </span> 	
-	<span class="link"><a href="./videos/ralicra22-video.mp4">video</a></span> <br>
+	<span class="link"><a href="./papers/ralicra22.pdf" target="_blank">pdf</a> &nbsp; </span> 	
+	<span class="link"><a href="./videos/ralicra22-video.mp4" target="_blank">video</a></span> <br>
 	</div>
 
 
@@ -303,8 +332,8 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Monocular Visual Shape Tracking and Servoing for Isometrically Deforming Objects</span><br>
 	<span class="authors">M. Aranda, J. A. Corrales, Y. Mezouar, A. Bartoli, E. Ozgur.</span>
 	<span class="venue">&nbsp;&nbsp; IROS 2020. &nbsp;</span>
-	<span class="link"><a href="./papers/iros20.pdf">pdf</a>&nbsp; </span>
-	<span class="link"><a href="./videos/iros20-video.mp4">video</a></span>
+	<span class="link"><a href="./papers/iros20.pdf" target="_blank">pdf</a>&nbsp; </span>
+	<span class="link"><a href="./videos/iros20-video.mp4" target="_blank">video</a></span>
 	</div>
 
 
@@ -312,7 +341,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Combining Visual Cues and Interactions for 3D-2D Registration in Liver Laparoscopy</span><br>
 	<span class="authors">Y. Espinel, E. Ozgur, L. Calvet, B. Le Roy, E. Buc, A. Bartoli.</span>
 	<span class="venue">&nbsp;&nbsp; IPCAI 2019. &nbsp;</span>
-	<span class="link"><a href="./papers/ipcai19.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/ipcai19.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -321,8 +350,8 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Visualizing In-Organ Tumors in Augmented Monocular Laparoscopy</span><br>
 	<span class="authors">E. Ozgur, A. Lafont, A. Bartoli.</span>
 	<span class="venue">&nbsp;&nbsp; ISMAR 2017. &nbsp;</span>
-	<span class="link"><a href="./papers/ismar17.pdf">pdf</a> &nbsp; </span>
-	<span class="link"><a href="./videos/ismar17-video.mp4">video</a></span>
+	<span class="link"><a href="./papers/ismar17.pdf" target="_blank">pdf</a> &nbsp; </span>
+	<span class="link"><a href="./videos/ismar17-video.mp4" target="_blank">video</a></span>
 	</div>
 
 
@@ -331,7 +360,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	using Contour and Shading Cues</span><br>
 	<span class="authors"> B. Koo, E. Ozgur, B. Le Roy, E. Buc, A. Bartoli.</span>
 	<span class="venue">&nbsp;&nbsp; MICCAI 2017. &nbsp;</span>
-	<span class="link"><a href="./papers/miccai17.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/miccai17.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -339,7 +368,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">A Perspective on Non-Isometric Shape-from-Template</span><br>
 	<span class="authors">A. Bartoli, E. Ozgur.</span>
 	<span class="venue">&nbsp;&nbsp; ISMAR 2016. &nbsp;</span>
-	<span class="link"><a href="./papers/ismar16.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/ismar16.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -347,7 +376,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Image-Based Control of Two Mobile Robots for Object Pushing</span><br>
 	<span class="authors">G. Lopez-Nicolas, E. Ozgur, Y. Mezouar.</span>
 	<span class="venue">&nbsp;&nbsp; IROS 2015. &nbsp;</span>
-	<span class="link"><a href="./papers/iros15.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/iros15.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -356,17 +385,16 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Structural Synthesis of Dexterous Hands</span><br>
 	<span class="authors">E. Ozgur, G. Gogu, Y. Mezouar.</span>
 	<span class="venue">&nbsp;&nbsp; IROS 2014. &nbsp;</span>
-	<span class="link"><a href="./papers/iros14.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/iros14.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
 
 	<div class="ref">
-	<span class="title">A Vision-Based Generic Dynamic Model of PKMs and its Experimental <br> 
-	Validation on the Quattro Parallel Robot </span><br>
+	<span class="title">A Vision-Based Generic Dynamic Model of PKMs and its Experimental Validation on the Quattro Parallel Robot </span><br>
 	<span class="authors">E. Ozgur, R. Dahmouche, N. Andreff, P. Martinet.</span>
 	<span class="venue">&nbsp;&nbsp; AIM 2014. &nbsp;</span>
-	<span class="link"><a href="./papers/aim14.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/aim14.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -374,7 +402,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Control-Based Synthesis and Tracking of Grasping Points</span><br>
 	<span class="authors">E. Ozgur, Y. Mezouar, G. Gogu.</span>
 	<span class="venue">&nbsp;&nbsp; ECC 2014. &nbsp;</span>
-	<span class="link"><a href="./papers/ecc14.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/ecc14.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -382,7 +410,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">A Method for Simplifying the Analysis of Leg-Based Visual Servoing of Parallel Robots</span><br>
 	<span class="authors">V. Rosenzveig, S. Briot, P. Martinet, E. Ozgur, N. Bouton.</span>
 	<span class="venue">&nbsp;&nbsp; ICRA 2014. &nbsp;</span>
-	<span class="link"><a href="./papers/icra14.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/icra14.pdf" target="_blank">pdf</a></span>
 	</div>
 
         
@@ -390,7 +418,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">High Speed Parallel Kinematic Manipulator State Estimation from Legs Observation</span><br>
 	<span class="authors">E. Ozgur, R. Dahmouche, N. Andreff, P. Martinet.</span>
 	<span class="venue">&nbsp;&nbsp; IROS 2013. &nbsp;</span>
-	<span class="link"><a href="./papers/iros13.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/iros13.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -398,7 +426,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Dynamic Control of the Quattro Robot by the Leg Edgels</span><br>
 	<span class="authors">E. Ozgur, N. Bouton, N. Andreff, P. Martinet.</span>
 	<span class="venue">&nbsp;&nbsp; ICRA 2011. &nbsp;</span>
-	<span class="link"><a href="./papers/icra11.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/icra11.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -406,14 +434,14 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Vector-Based Dynamic Modeling and Control of the Quattro Parallel Robot by means of Leg Orientations</span><br>
 	<span class="authors">E. Ozgur, N. Andreff, P. Martinet.</span>
 	<span class="venue">&nbsp;&nbsp; ICRA 2010. &nbsp;</span>
-	<span class="link"><a href="./papers/icra10.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/icra10.pdf" target="_blank">pdf</a></span>
 	</div>
 
 	<div class="ref">
 	<span class="title">On the Adequation of Dynamic Modeling and Control of Parallel Kinematic Manipulators</span><br>
 	<span class="authors">E. Ozgur, N. Andreff, P. Martinet.</span>
 	<span class="venue">&nbsp;&nbsp; IMSD 2010. &nbsp;</span>
-	<span class="link"><a href="./papers/imsd10.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/imsd10.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -422,14 +450,14 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Evolving Implicit Polynomial Interfaces</span><br>
 	<span class="authors">E. Ozgur, M. Unel, H. Erdogan, A. Ercil. </span>
 	<span class="venue">&nbsp;&nbsp; BMVC 2008. &nbsp;</span>
-	<span class="link"><a href="./papers/bmvc08.pdf"> pdf </a></span>
+	<span class="link"><a href="./papers/bmvc08.pdf" target="_blank"> pdf </a></span>
 	</div>
 	
 	<div class="ref">
 	<span class="title">Lip Segmentation Using Adaptive Color Space Training</span><br>
 	<span class="authors">E. Ozgur, B. Yilmaz, H. Karabalkan, H. Erdogan, M. Unel.</span>
 	<span class="venue">&nbsp;&nbsp; AVSP 2008. &nbsp;</span>
-	<span class="link"><a href="./papers/avsp08.pdf"> pdf </a></span>
+	<span class="link"><a href="./papers/avsp08.pdf" target="_blank"> pdf </a></span>
 	</div>
 
 
@@ -437,7 +465,7 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">A Comparative Study of Conventional Visual Servoing Schemes in Microsystem Applications</span><br>
 	<span class="authors">H. Bilen, M. A. Hocaoglu, E. Ozgur, M. Unel.</span>
 	<span class="venue">&nbsp;&nbsp; IROS 2007. &nbsp;</span>
-	<span class="link"><a href="./papers/iros07.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/iros07.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
@@ -445,14 +473,14 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">Positioning and Trajectory Following Tasks in Microsystems Using Model Free Visual Servoing</span><br>
 	<span class="authors">E. Ozgur, M. Unel.</span>
 	<span class="venue">&nbsp;&nbsp; IECON 2007. &nbsp;</span>
-	<span class="link"><a href="./papers/iecon07.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/iecon07.pdf" target="_blank">pdf</a></span>
 	</div>
 
 	<div class="ref">
 	<span class="title">Image Based Visual Servoing Using Bitangent Points Applied to Planar Shape Alignment</span><br>
 	<span class="authors">E. Ozgur, M. Unel.</span>
 	<span class="venue">&nbsp;&nbsp; RA 2007. &nbsp;</span>
-	<span class="link"><a href="./papers/ra07.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/ra07.pdf" target="_blank">pdf</a></span>
 	</div>
 
 	
@@ -460,28 +488,41 @@ E. Ozgur, D. Pezet, E. Buc, A. Bartoli.</span><br>
 	<span class="title">A Fast Algorithm for Vision-Based Hand Gesture Recognition for Robot Control</span><br>
 	<span class="authors">A. Malima, E. Ozgur, M. Cetin.</span>
 	<span class="venue">&nbsp;&nbsp; SIU 2006. &nbsp;</span>
-	<span class="link"><a href="./papers/siu06.pdf">pdf</a></span>
+	<span class="link"><a href="./papers/siu06.pdf" target="_blank">pdf</a></span>
 	</div>
 
 
       </div> <! end of conference papers subsection >
-      <br>
 
-
+<! ########################################################################### >
+<! ########################################################################### >
+  <br> <hr class="divider">
+<! ########################################################################### >
 <! ########################################################################### >
      <! THESES >
       <div class="subsection"> <h3><small>Theses</small></h3>
 
+	<div class="ref">
+	<span class="title"> The Visible, The Hidden and The Invisible</span><br>
+        <span class="authors">E. Ozgur, </span>
+	<span class="venue">Universite Clermont Auvergne, France, HDR, 2025.&nbsp;</span>
+	<span class="link"><a href="./papers/hdr25.pdf" target="_blank">pdf</a></span><br>
+	</div>
+
    	<div class="ref">
 	<span class="title">From Lines to Dynamics of Parallel Robots</span><br>
-        <span class="authors">E. Ozgur. &nbsp; </span>
-	<span class="venue">These de Doctorat, Universite Blaise Pascal, France, 2012.&nbsp;</span>
-	<span class="link"><a href="./papers/these12.pdf">pdf</a></span><br>
+        <span class="authors">E. Ozgur, </span>
+	<span class="venue">Universite Blaise Pascal, France, Doctorat, 2012.&nbsp;</span>
+	<span class="link"><a href="./papers/these12.pdf" target="_blank">pdf</a></span><br>
 	</div>
 
       </div> <! end of theses subsection >
       <br>
 
+<! ########################################################################### >
+<! ########################################################################### >
+  <br> <hr class="divider">
+<! ########################################################################### >
 <! ########################################################################### >
 
      <div class="subsection"> <h3><small>Conference Abbreviations</small></h3>
