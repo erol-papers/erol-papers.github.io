@@ -1,0 +1,12 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+}
+hr { margin: 1rem 0; }

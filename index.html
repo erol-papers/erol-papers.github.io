@@ -12,7 +12,7 @@
      body a {  color: #333;   }
       
       #container {
-          margin: 40px auto;   padding: 50px;  width: 1050px;
+          margin: 40px auto;   padding: 50px;  width: 1100px;
           background-color: #eee;          
           position: relative;
       }
@@ -69,8 +69,8 @@
       <div class="info"> 
  	 <img style="width: 400px; height: auto;"  src="page_files/logoMACCS.png"> 
          <img style="width: 227px; height: auto;"  src="page_files/tw.jpg">  &nbsp; <br>
-	 <font face="courier"> erol[dot]ozgur[at]sigma-clermont[dot]fr </font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-         <span class="link"><a href="./vacancy.html" target="_blank">Vacancy</a></span> <br>  
+	 <font face="courier"> erol[dot]ozgur[at]sigma-clermont[dot]fr </font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+         <span class="link"><a href="./immortalls.html" target="_blank">IMMORTALLS</a></span> <br>  
       </div>
 
 
@@ -615,8 +615,53 @@ special issue: slected papers from AE-CAI - Joint AE-CAI | CARE | OR 2.0 Worksho
 <! ########################################################################### >
 
    </div> <! end of Publications section >
+   
+<! ########################################################################### >
+<! ########################################################################### >
+   
+<script>
+function updateRefNumbers() {
+  // Find all subsections on the page
+  const subsections = document.querySelectorAll(".subsection");
+
+  subsections.forEach(subsection => {
+    // Get all .ref elements inside this subsection
+    const refs = subsection.querySelectorAll(".ref");
+    const total = refs.length;
+
+    // Number them in descending order within this subsection
+    refs.forEach((ref, index) => {
+      let num = ref.querySelector(".ref-number");
+      if (!num) {
+        num = document.createElement("span");
+        num.classList.add("ref-number");
+        ref.prepend(num);
+      }
+      num.textContent = `[${total - index}]`;
+    });
+  });
+}
+
+// Run on initial load
+document.addEventListener("DOMContentLoaded", () => {
+  updateRefNumbers();
+
+  // Watch for dynamic changes anywhere inside #container (or body)
+  const observer = new MutationObserver(() => updateRefNumbers());
+  observer.observe(document.querySelector("#container") || document.body, {
+    childList: true,
+    subtree: true,
+  });
+});
+</script>
+
+   
+   
 
 <! ########################################################################### >
 <! ########################################################################### >
 </body> 
 </html>
+
+
+
