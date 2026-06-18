@@ -1,28 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>People - My Research Project</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People - IMMORTALLS Project</title>
+<style>
+:root{
+--primary:#4b002a;
+--bg:#fafafa;
+--text:#222;
+--muted:#666;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+.hero img{display:block; height:auto; max-width: 1000px; margin: auto; }
+nav{
+background:white;
+border-bottom:1px solid #e5e5e5;
+padding:12px 18px;
+display:flex;
+gap:24px;
+overflow-x:auto;
+max-width:1000px;
+margin:0 auto;
+}
+nav a{text-decoration:none;color:var(--primary);font-weight:600;white-space:nowrap;}
+.container{max-width:1000px;margin:auto;padding:24px 18px 60px;}
+h1{margin:0 0 24px;font-size:2rem;color:var(--primary);}
+
+/* Team list styling matching the publications aesthetic */
+.team-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.member-card {
+background:white;
+padding:18px;
+margin:16px 0;
+border-radius:12px;
+border:1px solid #ececec;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 16px;
+}
+.member-info p {
+margin: 0;
+font-size: .95rem;
+}
+.member-info strong {
+font-size: 1.1rem;
+color: var(--text);
+}
+.member-info .role {
+color: var(--muted);
+margin-left: 8px;
+}
+.btn{
+text-decoration:none;
+background:var(--primary);
+color:white;
+padding:8px 14px;
+border-radius:8px;
+font-size:.9rem;
+display:inline-flex;
+align-items:center;
+gap:8px;
+font-weight:600;
+transition: background 0.2s, transform 0.1s;
+}
+.btn svg{
+width:16px;
+height:16px;
+fill:currentColor;
+display:block;
+}
+.btn:hover{
+filter:brightness(1.15);
+}
+.btn:active{
+transform: scale(0.98);
+}
+@media (max-width:700px){
+.container{padding:18px 14px 40px;}
+nav{padding:12px 14px;}
+h1{font-size:1.7rem;}
+.member-card {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding:14px;
+}
+.member-info .role {
+  display: block;
+  margin-left: 0;
+  margin-top: 4px;
+}
+.btn {
+  width: 100%;
+  justify-content: center;
+}
+}
+</style>
 </head>
 <body>
-  <img src="page_files/immortalls-banner.png" alt="Project Banner" style="width:100%; max-height:300px; object-fit:cover;">
+<div class="hero">
+<img src="page_files/immortalls-banner.png" alt="IMMORTALLS banner" style="display:block; max-width:1000px; height:auto; margin:0 auto;">
+</div>
 
-  <nav>
-    <a href="immortalls.html">Home</a>
-    <a href="publications.html">Publications</a>
-    <a href="people.html">People</a>
-  </nav>
-  <hr>
+<nav>
+<a href="immortalls.html">Home</a>
+<a href="publications.html">Publications</a>
+<a href="people.html">People</a>
+</nav>
 
-  <h1>Team</h1>
-  <ul>
-    <li><strong>MCF-HDR. Erol OZGUR</strong> — Principal Investigator. <a href="https://erol-papers.github.io">Website</a></li>
-    <li><strong>MCF. Mohammad Alkhatib</strong> — Researcher. <a href="https://scholar.google.com/citations?user=czFWrd8AAAAJ&hl=fr&oi=ao">Website</a></li>
-    <li><strong>Prof. Youcef Mezouar</strong> — Researcher. <a href="https://scholar.google.com/citations?hl=fr&user=jODWpzQAAAAJ">Website</a></li>
-    <li><strong>Prof. Adrien Bartoli</strong> — Researcher. <a href="https://encov.ip.uca.fr/ab">Website</a></li>
-    <li><strong>MD, PhD, Prof. Emmanuel Buc</strong> — Surgeon. <a href="https://scholar.google.com/citations?hl=fr&user=B1o6wgEAAAAJ">Website</a></li>
-    <li><strong>MD, PhD, Prof. Bertrand Le Roy</strong> — Surgeon. <a href="https://scholar.google.com/citations?hl=fr&user=9B7rynYAAAAJ">Website</a></li>
-  </ul>
+<div class="container">
+<h1>Team</h1>
+
+<ul class="team-list">
+  <li class="member-card">
+    <div class="member-info">
+      <strong>MCF-HDR. Erol OZGUR</strong>
+      <span class="role">— Principal Investigator</span>
+    </div>
+    <a class="btn" href="https://erol-papers.github.io" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <span>Website</span>
+    </a>
+  </li>
+
+  <li class="member-card">
+    <div class="member-info">
+      <strong>MCF. Mohammad Alkhatib</strong>
+      <span class="role">— Researcher</span>
+    </div>
+    <a class="btn" href="https://scholar.google.com/citations?user=czFWrd8AAAAJ&hl=fr&oi=ao" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <span>Website</span>
+    </a>
+  </li>
+
+  <li class="member-card">
+    <div class="member-info">
+      <strong>Prof. Youcef Mezouar</strong>
+      <span class="role">— Researcher</span>
+    </div>
+    <a class="btn" href="https://scholar.google.com/citations?hl=fr&user=jODWpzQAAAAJ" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <span>Website</span>
+    </a>
+  </li>
+
+  <li class="member-card">
+    <div class="member-info">
+      <strong>Prof. Adrien Bartoli</strong>
+      <span class="role">— Researcher</span>
+    </div>
+    <a class="btn" href="https://encov.ip.uca.fr/ab" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <span>Website</span>
+    </a>
+  </li>
+
+  <li class="member-card">
+    <div class="member-info">
+      <strong>MD, PhD, Prof. Emmanuel Buc</strong>
+      <span class="role">— Surgeon</span>
+    </div>
+    <a class="btn" href="https://scholar.google.com/citations?hl=fr&user=B1o6wgEAAAAJ" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <span>Website</span>
+    </a>
+  </li>
+
+  <li class="member-card">
+    <div class="member-info">
+      <strong>MD, PhD, Prof. Bertrand Le Roy</strong>
+      <span class="role">— Surgeon</span>
+    </div>
+    <a class="btn" href="https://scholar.google.com/citations?hl=fr&user=9B7rynYAAAAJ" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <span>Website</span>
+    </a>
+  </li>
+</ul>
+
+</div>
 </body>
 </html>
