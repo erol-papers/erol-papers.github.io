@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IMMORTALLS Publications</title>
+
+<!-- Import Montserrat TrueType Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
 <style>
 :root{
 --primary:#4b002a;
@@ -35,7 +41,16 @@ nav a{text-decoration:none;color:var(--primary);font-weight:600;white-space:nowr
 h1{margin:0;font-size:2rem;color:var(--primary);}
 .intro{color:var(--muted);margin-bottom:28px;}
 .year{margin-top:32px;padding-bottom:8px;border-bottom:2px solid #e8e8e8;color:var(--primary);}
-.pub{background:white;padding:18px;margin:16px 0;border-radius:12px;border:1px solid #ececec;}
+
+/* Updated to allow absolute positioning for the badge */
+.pub{
+position:relative;
+background:white;
+padding:18px;
+margin:16px 0;
+border-radius:12px;
+border:1px solid #ececec;
+}
 .pub h3{margin:0 0 10px;font-size:1.1rem;}
 .pub p{margin:0;font-size:.95rem;}
 .links{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
@@ -64,11 +79,32 @@ filter:brightness(1.15);
 .btn:active{
 transform: scale(0.98);
 }
+
+/* Montserrat Pill Badge Styling (Supports Upper & Lower Case) */
+.pub-acronym {
+position: absolute;
+bottom: 18px;
+right: 18px;
+background: rgba(75, 0, 42, 0.07);
+color: var(--primary);
+padding: 5px 12px;
+border-radius: 20px;
+border: 1px solid rgba(75, 0, 42, 0.12);
+font-family: 'Montserrat', sans-serif;
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 0.5px; /* Clean look for mixed-case lettering */
+}
+
 @media (max-width:700px){
 .container{padding:18px 14px 40px;}
 nav{padding:12px 14px;}
 h1{font-size:1.7rem;}
 .pub{padding:14px;}
+.pub-acronym {
+bottom: 14px;
+right: 14px;
+}
 }
 </style>
 </head>
@@ -101,6 +137,7 @@ h1{font-size:1.7rem;}
     <span>video</span>
   </a>
 </div>
+<span class="pub-acronym">ContactLUS</span>
 </article>
 
 <article class="pub">
@@ -116,6 +153,7 @@ h1{font-size:1.7rem;}
     <span>video</span>
   </a>
 </div>
+<span class="pub-acronym">Tf32</span>
 </article>
 
 <article class="pub">
@@ -140,7 +178,9 @@ h1{font-size:1.7rem;}
     <span>video3</span>
   </a>
 </div>
+<span class="pub-acronym">RadioLUS</span>
 </article>
+
 <h2 class='year'>2025</h2>
 <article class="pub">
 <h3>Hidden Tumor Visualization in Augmented Monocular Liver Laparoscopy</h3>
@@ -151,6 +191,7 @@ h1{font-size:1.7rem;}
     <span>pdf</span>
   </a>
 </div>
+<span class="pub-acronym">HTV</span>
 </article>
 
 <article class="pub">
@@ -163,6 +204,7 @@ h1{font-size:1.7rem;}
     <span>pdf</span>
   </a>
 </div>
+<span class="pub-acronym">ST</span>
 </article>
 
 
@@ -175,6 +217,7 @@ h1{font-size:1.7rem;}
     <span>pdf</span>
   </a>
 </div>
+<span class="pub-acronym">SpherOf</span>
 </article>
 
 
@@ -193,6 +236,7 @@ h1{font-size:1.7rem;}
     <span>video</span>
   </a>
 </div>
+<span class="pub-acronym">LARLUS</span>
 </article>
 
 <article class="pub">
@@ -208,6 +252,7 @@ h1{font-size:1.7rem;}
     <span>video</span>
   </a>
 </div>
+<span class="pub-acronym">SpherO</span>
 </article>
 
 <article class="pub">
@@ -224,6 +269,7 @@ h1{font-size:1.7rem;}
     <span>video</span>
   </a>
 </div>
+<span class="pub-acronym">LUP</span>
 </article>
 
 </div>
