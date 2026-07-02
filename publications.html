@@ -41,6 +41,8 @@ nav a{text-decoration:none;color:var(--primary);font-weight:600;white-space:nowr
 h1{margin:0;font-size:2rem;color:var(--primary);}
 .intro{color:var(--muted);margin-bottom:28px;}
 .year{margin-top:32px;padding-bottom:8px;border-bottom:2px solid #e8e8e8;color:var(--primary);}
+nav a.active {opacity: 1; border-bottom: 2px solid var(--primary); padding-bottom: 2px;}
+
 
 /* Updated to allow absolute positioning for the badge */
 .pub{
@@ -115,7 +117,8 @@ right: 14px;
 
 <nav>
 <a href="immortalls.html">Home</a>
-<a href="publications.html">Publications</a>
+<a href="publications.html"class="active">Publications</a>
+<a href="key-results.html" >Key Results</a>
 <a href="people.html">People</a>
 </nav>
 
@@ -147,10 +150,6 @@ right: 14px;
   <a class="btn pdf" href="./papers/ijcars26-Tf32.pdf" target="_blank">
     <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
     <span>pdf</span>
-  </a>
-  <a class="btn video" href="./videos/ijcars-Tf32.m4v" target="_blank">
-    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-    <span>video</span>
   </a>
 </div>
 <span class="pub-acronym">Tf32</span>

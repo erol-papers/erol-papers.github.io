@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IMMORTALLS Key Results</title>
+
+<!-- Import Montserrat TrueType Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--primary:#4b002a;
+--primary-light: rgba(75, 0, 42, 0.05);
+--bg:#f4f5f7;
+--text:#1a1a1a;
+--muted:#555;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.5;
+}
+.hero img{display:block; height:auto; max-width: 1000px; margin: auto; }
+nav{
+background:white;
+border-bottom:1px solid #e5e5e5;
+padding:14px 18px;
+display:flex;
+gap:24px;
+overflow-x:auto;
+max-width:1000px;
+margin:0 auto;
+}
+nav a{text-decoration:none;color:var(--primary);font-weight:600;white-space:nowrap;opacity: 0.7;transition: opacity 0.2s;}
+nav a:hover{opacity: 1;}
+nav a.active {opacity: 1; border-bottom: 2px solid var(--primary); padding-bottom: 2px;}
+
+.container{max-width:1000px;margin:auto;padding:32px 18px 60px;}
+h1{margin:0;font-size:2.2rem;color:var(--primary);font-weight: 800;}
+.intro{color:var(--muted);margin-bottom:32px;font-size:1.1rem;max-width: 700px;}
+
+/* Immersive 2-Column Video Showcase Grid */
+.video-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+gap: 32px;
+}
+.showcase-card {
+background: white;
+border-radius: 14px;
+overflow: hidden;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+display: flex;
+flex-direction: column;
+border: 1px solid #eef0f2;
+}
+.showcase-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 30px rgba(75, 0, 42, 0.08);
+}
+
+/* Fluid Video Container styling */
+.media-wrapper {
+position: relative;
+width: 100%;
+aspect-ratio: 16 / 9;
+background: #000;
+}
+.media-wrapper video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* Card Content Area */
+.card-body {
+padding: 24px;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
+.card-header-row {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 16px;
+margin-bottom: 12px;
+}
+.card-body h3 {
+margin: 0;
+font-size: 1.25rem;
+line-height: 1.4;
+color: #111;
+font-weight: 700;
+}
+
+/* Refined App Acronym Pill */
+.app-badge {
+background: var(--primary-light);
+color: var(--primary);
+padding: 4px 10px;
+border-radius: 6px;
+font-family: 'Montserrat', sans-serif;
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 0.5px;
+white-space: nowrap;
+border: 1px solid rgba(75, 0, 42, 0.1);
+}
+.card-body p {
+margin: 0 0 24px 0;
+font-size: 0.95rem;
+color: var(--muted);
+line-height: 1.5;
+flex-grow: 1;
+}
+
+/* Clean Promotional Dynamic Action Row */
+.card-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-top: 1px solid #f0f0f2;
+padding-top: 16px;
+margin-top: auto;
+}
+
+/* Exact Original Pill Badge Styling from Template */
+.pub-acronym {
+background: rgba(75, 0, 42, 0.07);
+color: var(--primary);
+padding: 5px 12px;
+border-radius: 20px;
+border: 1px solid rgba(75, 0, 42, 0.12);
+font-family: 'Montserrat', sans-serif;
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 0.5px;
+display: inline-block;
+}
+
+.pulse-indicator {
+display: flex;
+align-items: center;
+gap: 6px;
+font-size: 0.75rem;
+font-weight: 700;
+text-transform: uppercase;
+color: #2e7d32;
+letter-spacing: 0.5px;
+}
+.pulse-dot {
+width: 7px;
+height: 7px;
+background: #4caf50;
+border-radius: 50%;
+box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(76, 175, 80, 0); }
+100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+}
+
+@media (max-width:980px){
+.video-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width:700px){
+.container{padding:24px 14px 40px;}
+nav{padding:14px 14px;}
+h1{font-size:1.8rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<img src="page_files/immortalls-banner.png" alt="IMMORTALLS banner">
+</div>
+
+<nav>
+<a href="immortalls.html">Home</a>
+<a href="publications.html">Publications</a>
+<a href="key-results.html" class="active">Key Results</a>
+<a href="people.html">People</a>
+</nav>
+
+<div class="container">
+<h1>Key Results</h1>
+<p class="intro">Video demonstrations of some applications developed within the IMMORTALLS project.</p>
+
+<div class="video-grid">
+
+
+  <!-- Result Card RadioLUS -->
+  <article class="showcase-card">
+    <div class="media-wrapper">
+      <video controls preload="metadata">
+        <source src="./videos/isbi26_video3.m4v" type="video/mp4">
+      </video>
+    </div>
+    <div class="card-body">
+      <div class="card-header-row">
+        <h3>Guidance for Tumour Localisation</h3>
+      </div>
+      <p>Fusing laparoscopic video with laparoscopic ultrasound imaging and overlaying automated tumor segmentation for intraoperative guidance.</p>
+      <div class="card-footer">
+        <span class="pub-acronym">RadioLUS</span>
+        <div class="pulse-indicator"><span class="pulse-dot"></span>Demo App</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Result Card LARLUS -->
+  <article class="showcase-card">
+    <div class="media-wrapper">
+      <video controls preload="metadata">
+        <source src="./videos/Demo_LARLUS.m4v" type="video/mp4">
+      </video>
+    </div>
+    <div class="card-body">
+      <div class="card-header-row">
+        <h3>Laparoscopic AR from LUS</h3>
+      </div>
+      <p>Real-time 6-DoF LUS pose estimation for augmenting laparoscopic video with LUS imaging.</p>
+      <div class="card-footer">
+        <span class="pub-acronym">LARLUS</span>
+        <div class="pulse-indicator"><span class="pulse-dot"></span>Demo App</div>
+      </div>
+    </div>
+  </article>
+
+
+
+
+
+</div>
+</div>
+
+</body>
+</html>
