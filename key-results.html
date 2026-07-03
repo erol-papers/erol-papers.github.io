@@ -32,6 +32,7 @@ background:white;
 border-bottom:1px solid #e5e5e5;
 padding:14px 18px;
 display:flex;
+align-items: center; /* Add this line */
 gap:24px;
 overflow-x:auto;
 max-width:1000px;
@@ -40,6 +41,16 @@ margin:0 auto;
 nav a{text-decoration:none;color:var(--primary);font-weight:600;white-space:nowrap;opacity: 0.7;transition: opacity 0.2s;}
 nav a:hover{opacity: 1;}
 nav a.active {opacity: 1; border-bottom: 2px solid var(--primary); padding-bottom: 2px;}
+
+.nav-logo {
+  margin-left: auto; /* This pushes the logo to the absolute right side */
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 30px; /* You can change 30px to whatever size looks best for your header */
+  width: auto;
+}
 
 .container{max-width:1000px;margin:auto;padding:32px 18px 60px;}
 h1{margin:0;font-size:2.2rem;color:var(--primary);font-weight: 800;}
@@ -193,6 +204,13 @@ h1{font-size:1.8rem;}
 <a href="publications.html">Publications</a>
 <a href="key-results.html" class="active">Key Results</a>
 <a href="people.html">People</a>
+<a href="partners.html">Partners</a>
+
+
+<div class="nav-logo">
+<img src="page_files/logo-anr.jpg" alt="ANR Logo">
+</div>
+
 </nav>
 
 <div class="container">

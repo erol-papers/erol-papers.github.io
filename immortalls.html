@@ -25,6 +25,7 @@ background:white;
 border-bottom:1px solid #e5e5e5;
 padding:12px 18px;
 display:flex;
+align-items:center;
 gap:24px;
 overflow-x:auto;
 max-width:1000px;
@@ -35,6 +36,27 @@ nav a{text-decoration:none;color:var(--primary);font-weight:600;white-space:nowr
 h1{margin:0 0 20px;font-size:2rem;color:var(--primary);}
 nav a.active {opacity: 1; border-bottom: 2px solid var(--primary); padding-bottom: 2px;}
 
+.nav-logo {
+margin-left: auto; 
+display: flex;
+align-items: center;
+}
+.nav-logo img {
+height: 30px;
+width: auto;
+}
+
+/* Added: Style for the pipeline figure container and image */
+.project-figure {
+width: 100%;
+margin-bottom: 24px; /* Creates spacing between the image and the textbox */
+text-align: center;
+}
+.project-figure img {
+max-width: 100%; /* Ensures the image scales down nicely on mobile screens */
+height: auto;
+border-radius: 8px; /* Optional: adds slightly rounded corners to match the textbox */
+}
 
 /* Text styling customized to match the project aesthetics */
 .project-description {
@@ -53,6 +75,7 @@ color: var(--text);
 nav{padding:12px 14px;}
 h1{font-size:1.7rem;}
 .project-description {padding:18px;}
+.project-figure {margin-bottom: 18px;} /* Slightly smaller margin on mobile */
 }
 </style>
 </head>
@@ -66,10 +89,20 @@ h1{font-size:1.7rem;}
 <a href="publications.html">Publications</a>
 <a href="key-results.html" >Key Results</a>
 <a href="people.html">People</a>
+<a href="partners.html">Partners</a>
+
+<div class="nav-logo">
+<img src="page_files/logo-anr.jpg" alt="ANR Logo">
+</div>
 </nav>
 
 <div class="container">
 <h1>IMMORTALLS - ANR JCJC project</h1>
+
+<div class="project-figure">
+<img src="page_files/immortalls-pipeline.png" alt="IMMORTALLS project pipeline">
+</div>
+
 <p class="project-description">
 Laparoscopic Liver Resection (LLR) is less traumatic than open surgery, leading to faster recovery and lower healthcare costs. However, its adoption remains limited due to three key challenges. <br><br>
 

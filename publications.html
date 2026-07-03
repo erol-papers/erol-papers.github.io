@@ -30,7 +30,8 @@ nav{
 background:white;
 border-bottom:1px solid #e5e5e5;
 padding:12px 18px;
-display:flex;
+display:flex; 
+align-items: center; /* Add this line */
 gap:24px;
 overflow-x:auto;
 max-width:1000px;
@@ -43,6 +44,15 @@ h1{margin:0;font-size:2rem;color:var(--primary);}
 .year{margin-top:32px;padding-bottom:8px;border-bottom:2px solid #e8e8e8;color:var(--primary);}
 nav a.active {opacity: 1; border-bottom: 2px solid var(--primary); padding-bottom: 2px;}
 
+.nav-logo {
+  margin-left: auto; /* This pushes the logo to the absolute right side */
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 30px; /* You can change 30px to whatever size looks best for your header */
+  width: auto;
+}
 
 /* Updated to allow absolute positioning for the badge */
 .pub{
@@ -120,6 +130,13 @@ right: 14px;
 <a href="publications.html"class="active">Publications</a>
 <a href="key-results.html" >Key Results</a>
 <a href="people.html">People</a>
+<a href="partners.html">Partners</a>
+
+
+<div class="nav-logo">
+<img src="page_files/logo-anr.jpg" alt="ANR Logo">
+</div>
+
 </nav>
 
 <div class="container">

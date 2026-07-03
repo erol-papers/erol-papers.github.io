@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partners - IMMORTALLS - ANR JCJC project</title>
+
+<!-- Import Montserrat TrueType Font matching Key Results -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--primary:#4b002a;
+--primary-light: rgba(75, 0, 42, 0.05);
+--bg:#f4f5f7;
+--text:#1a1a1a;
+--muted:#555;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.5;
+}
+.hero img{display:block; height:auto; max-width: 1000px; margin: auto; }
+nav{
+background:white;
+border-bottom:1px solid #e5e5e5;
+padding:14px 18px;
+display:flex;
+align-items: center;
+gap:24px;
+overflow-x:auto;
+max-width:1000px;
+margin:0 auto;
+}
+nav a{text-decoration:none;color:var(--primary);font-weight:600;white-space:nowrap;opacity: 0.7;transition: opacity 0.2s;}
+nav a:hover{opacity: 1;}
+nav a.active {opacity: 1; border-bottom: 2px solid var(--primary); padding-bottom: 2px;}
+
+.nav-logo {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.container{max-width:1000px;margin:auto;padding:32px 18px 60px;}
+h1{margin:0;font-size:2.2rem;color:var(--primary);font-weight: 800;}
+.intro{color:var(--muted);margin-bottom:32px;font-size:1.1rem;max-width: 700px;}
+
+/* Partners Grid System based on Key Results layout */
+.partners-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 24px;
+}
+.partner-card {
+background: white;
+border-radius: 14px;
+overflow: hidden;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+display: flex;
+flex-direction: column;
+border: 1px solid #eef0f2;
+text-decoration: none;
+color: inherit;
+}
+.partner-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 30px rgba(75, 0, 42, 0.08);
+}
+
+/* Beautiful Logo Canvas Header */
+.logo-wrapper {
+background: #fafafa;
+width: 100%;
+height: 160px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 24px;
+border-bottom: 1px solid #f0f0f2;
+}
+.logo-wrapper img {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+filter: grayscale(10%) contrast(95%);
+transition: filter 0.3s ease;
+}
+.partner-card:hover .logo-wrapper img {
+filter: grayscale(0%) contrast(100%);
+}
+
+/* Card Content Area */
+.card-body {
+padding: 20px;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
+.card-body h3 {
+margin: 0 0 6px 0;
+font-size: 1.15rem;
+line-height: 1.4;
+color: #111;
+font-weight: 700;
+}
+.card-body p {
+margin: 0 0 16px 0;
+font-size: 0.9rem;
+color: var(--muted);
+line-height: 1.5;
+flex-grow: 1;
+}
+
+/* Card Footer Action Row */
+.card-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-top: 1px solid #f0f0f2;
+padding-top: 14px;
+margin-top: auto;
+}
+
+/* Original Pill Badge design from Template */
+.partner-badge {
+background: rgba(75, 0, 42, 0.07);
+color: var(--primary);
+padding: 5px 12px;
+border-radius: 20px;
+border: 1px solid rgba(75, 0, 42, 0.12);
+font-family: 'Montserrat', sans-serif;
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 0.5px;
+display: inline-block;
+text-transform: uppercase;
+}
+
+/* Location Tag Indicator */
+.location-tag {
+display: flex;
+align-items: center;
+gap: 4px;
+font-size: 0.75rem;
+font-weight: 700;
+text-transform: uppercase;
+color: #666;
+letter-spacing: 0.5px;
+}
+.location-dot {
+width: 6px;
+height: 6px;
+background: var(--primary);
+border-radius: 50%;
+opacity: 0.6;
+}
+
+@media (max-width:640px){
+.partners-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+@media (max-width:700px){
+.container{padding:24px 14px 40px;}
+nav{padding:14px 14px;}
+h1{font-size:1.8rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<img src="page_files/immortalls-banner.png" alt="IMMORTALLS banner">
+</div>
+
+<nav>
+<a href="immortalls.html">Home</a>
+<a href="publications.html">Publications</a>
+<a href="key-results.html">Key Results</a>
+<a href="people.html">People</a>
+<a href="partners.html" class="active">Partners</a>
+
+<div class="nav-logo">
+<img src="page_files/logo-anr.jpg" alt="ANR Logo">
+</div>
+</nav>
+
+<div class="container">
+<h1>Participating Institutions</h1>
+<p class="intro">The research and clinical organisations collaborating on the IMMORTALLS project.</p>
+
+<div class="partners-grid">
+
+  <!-- Partner Card CAINP -->
+  <a href="https://www.clermont-auvergne-inp.fr/" class="partner-card" target="_blank">
+    <div class="logo-wrapper">
+      <img src="page_files/logo-CAINP.png" alt="University Logo">
+    </div>
+    <div class="card-body">
+      <h3>Clermont Auvergne INP</h3>
+      <p>Coordinating the project.</p>
+      <div class="card-footer">
+        <span class="partner-badge">Coordinator</span>
+        <div class="location-tag"><span class="location-dot"></span>France</div>
+      </div>
+    </div>
+  </a>
+
+
+  <!-- Partner Card IP -->
+  <a href="http://www.institutpascal.uca.fr/" class="partner-card" target="_blank">
+    <div class="logo-wrapper">
+      <img src="page_files/logo-IP.png" alt="Research Lab Logo">
+    </div>
+    <div class="card-body">
+      <h3>Institut Pascal</h3>
+      <p>Leading the core research.</p>
+      <div class="card-footer">
+        <span class="partner-badge">Research Lab</span>
+        <div class="location-tag"><span class="location-dot"></span>France</div>
+      </div>
+    </div>
+  </a>
+
+
+  <!-- Partner Card CHU CF -->
+  <a href="https://www.chu-clermontferrand.fr/" class="partner-card" target="_blank">
+    <div class="logo-wrapper">
+      <img src="page_files/logo-CHU-CF.png" alt="Hospital Logo">
+    </div>
+    <div class="card-body">
+      <h3>CHU Clermont-Ferrand</h3>
+      <p>Providing essential intraoperative clinical validation, surgical guidelines, and datasets.</p>
+      <div class="card-footer">
+        <span class="partner-badge">Clinical Partner</span>
+        <div class="location-tag"><span class="location-dot"></span>France</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Partner Card CHU StE -->
+  <a href="https://www.chu-st-etienne.fr/" class="partner-card" target="_blank">
+    <div class="logo-wrapper">
+      <img src="page_files/logo-CHU-StE.png" alt="Hospital Logo">
+    </div>
+    <div class="card-body">
+      <h3>CHU St-Etienne</h3>
+      <p>Providing essential intraoperative clinical validation, surgical guidelines, and datasets.</p>
+      <div class="card-footer">
+        <span class="partner-badge">Clinical Partner</span>
+        <div class="location-tag"><span class="location-dot"></span>France</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Partner Card SURGAR -->
+  <a href="https://www.surgar-surgery.com/" class="partner-card" target="_blank">
+    <div class="logo-wrapper">
+      <img src="page_files/logo-SURGAR.png" alt="SurgAR Logo">
+    </div>
+    <div class="card-body">
+      <h3>SURGAR</h3>
+      <p>Developing augmented reality solutions for minimally invasive surgery.</p>
+      <div class="card-footer">
+        <span class="partner-badge">Startup</span>
+        <div class="location-tag"><span class="location-dot"></span>France</div>
+      </div>
+    </div>
+  </a>
+
+
+</div>
+</div>
+
+</body>
+</html>
