@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Key Results — Hepataug</title>
+  
+  <!-- Import Montserrat and Inter Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #4B2E2E;          
+      --accent: #C86D51;           
+      --bg: #FFFFFF;               
+      --surface: #FAF7F5;          
+      --surface-tint: #F3EFEA;     
+      --text-main: #2C2424;        
+      --text-muted: #5E5050;       
+      --border: #E8E1DC;
+      --radius: 16px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Seamless Banner */
+    .banner-wrapper {
+      background: var(--bg);
+      padding: 40px 0 20px;
+      text-align: center;
+    }
+
+    .banner-wrapper img {
+      max-width: var(--max-width);
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation Bar matching Banner Width */
+    header {
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      padding: 12px 0;
+    }
+
+    nav {
+      max-width: var(--max-width);
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Main Navigation Pill Group */
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      padding: 6px;
+      border-radius: 50px;
+      flex: 1;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.92rem;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      padding: 8px 20px;
+      border-radius: 30px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      background: rgba(75, 46, 46, 0.04);
+    }
+
+    .nav-links a.active {
+      color: #FFFFFF;
+      background: var(--primary);
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(75, 46, 46, 0.15);
+    }
+
+    /* IMMORTALLS Companion Link Button */
+    .nav-immortalls {
+      text-decoration: none;
+      background: var(--surface);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 14px 22px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      border: 1px solid var(--border);
+    }
+
+    .nav-immortalls:hover {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .nav-immortalls svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: var(--max-width);
+      margin: 48px auto 64px;
+      padding: 0 24px;
+    }
+
+    .page-title {
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .intro {
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      font-size: 1.05rem;
+    }
+
+    /* Full-Width Video Showcase Card */
+    .result-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid transparent;
+      width: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .result-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(75, 46, 46, 0.08);
+      border-color: var(--border);
+    }
+
+    /* Prominent Full-Width Video Container */
+    .video-container {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      background: #000000;
+      display: flex;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 950px) {
+      nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+
+      .nav-links {
+        overflow-x: auto;
+        justify-content: flex-start;
+        border-radius: 12px;
+      }
+
+      .nav-links a {
+        flex: unset;
+        padding: 6px 14px;
+      }
+
+      .nav-immortalls {
+        justify-content: center;
+        border-radius: 12px;
+        padding: 10px;
+      }
+
+      .container {
+        margin: 24px auto;
+        padding: 0 16px;
+      }
+
+      .result-card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seamless Hero Banner -->
+  <div class="banner-wrapper">
+    <img src="page_files/Hepataug-banner.png" alt="Hepataug Header Banner">
+  </div>
+
+  <!-- Navigation with IMMORTALLS Companion Link -->
+  <header>
+    <nav>
+      <div class="nav-links">
+        <a href="hepataug.html">Home</a>
+        <a href="hepataug-publications.html">Publications</a>
+        <a href="hepataug-key-results.html" class="active">Key Results</a>
+        <a href="hepataug-people.html">People</a>
+        <a href="hepataug-partners.html">Partners</a>
+      </div>
+      
+      <!-- IMMORTALLS Project Link -->
+      <a href="immortalls.html" class="nav-immortalls">
+        <span>IMMORTALLS</span>
+        <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1 class="page-title">Key Results</h1>
+    <p class="intro">Demonstrations and visual validation of augmented reality guidance during laparoscopic liver resection.</p>
+    
+    <!-- Video Showcase Card with Full-Width Local Video Player -->
+    <section class="result-card">
+      <div class="video-container">
+        <video controls preload="metadata">
+          <source src="./videos/Hepataug-video-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

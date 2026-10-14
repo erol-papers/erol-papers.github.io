@@ -46,10 +46,41 @@ nav a.active {opacity: 1; border-bottom: 2px solid var(--primary); padding-botto
   margin-left: auto;
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 .nav-logo img {
   height: 30px;
   width: auto;
+}
+
+/* Visually appealing Hepataug Project Link */
+.nav-hepataug-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(75, 0, 42, 0.05);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(75, 0, 42, 0.12);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  opacity: 1;
+}
+
+.nav-hepataug-link:hover {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+}
+
+.nav-hepataug-link svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
 }
 
 .container{max-width:1000px;margin:auto;padding:32px 18px 60px;}
@@ -191,7 +222,12 @@ h1{font-size:1.8rem;}
 <a href="partners.html" class="active">Partners</a>
 
 <div class="nav-logo">
-<img src="page_files/logo-anr.jpg" alt="ANR Logo">
+  <!-- Smooth Hepataug Project Link -->
+  <a href="hepataug.html" class="nav-hepataug-link">
+    <span>Hepataug</span>
+    <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+  </a>
+  <img src="page_files/logo-anr.jpg" alt="ANR Logo">
 </div>
 </nav>
 
@@ -216,7 +252,6 @@ h1{font-size:1.8rem;}
     </div>
   </a>
 
-
   <!-- Partner Card IP -->
   <a href="http://www.institutpascal.uca.fr/" class="partner-card" target="_blank">
     <div class="logo-wrapper">
@@ -231,7 +266,6 @@ h1{font-size:1.8rem;}
       </div>
     </div>
   </a>
-
 
   <!-- Partner Card CHU CF -->
   <a href="https://www.chu-clermontferrand.fr/" class="partner-card" target="_blank">
@@ -278,7 +312,6 @@ h1{font-size:1.8rem;}
     </div>
   </a>
 
-
   <!-- Partner Card ANR -->
   <a href="https://anr.fr" class="partner-card" target="_blank">
     <div class="logo-wrapper">
@@ -293,8 +326,6 @@ h1{font-size:1.8rem;}
       </div>
     </div>
   </a>
-
-
 
 </div>
 </div>

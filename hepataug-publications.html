@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications — Hepataug</title>
+  
+  <!-- Import Montserrat and Inter Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #4B2E2E;          
+      --accent: #C86D51;           
+      --bg: #FFFFFF;               
+      --surface: #FAF7F5;          
+      --surface-tint: #F3EFEA;     
+      --text-main: #2C2424;        
+      --text-muted: #5E5050;       
+      --border: #E8E1DC;
+      --radius: 16px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Seamless Banner */
+    .banner-wrapper {
+      background: var(--bg);
+      padding: 40px 0 20px;
+      text-align: center;
+    }
+
+    .banner-wrapper img {
+      max-width: var(--max-width);
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation Bar matching Banner Width */
+    header {
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      padding: 12px 0;
+    }
+
+    nav {
+      max-width: var(--max-width);
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Main Navigation Pill Group */
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      padding: 6px;
+      border-radius: 50px;
+      flex: 1;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.92rem;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      padding: 8px 20px;
+      border-radius: 30px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      background: rgba(75, 46, 46, 0.04);
+    }
+
+    .nav-links a.active {
+      color: #FFFFFF;
+      background: var(--primary);
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(75, 46, 46, 0.15);
+    }
+
+    /* IMMORTALLS Companion Link Button */
+    .nav-immortalls {
+      text-decoration: none;
+      background: var(--surface);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 14px 22px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      border: 1px solid var(--border);
+    }
+
+    .nav-immortalls:hover {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .nav-immortalls svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: var(--max-width);
+      margin: 48px auto 64px;
+      padding: 0 24px;
+    }
+
+    .page-title {
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .intro {
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      font-size: 1.05rem;
+    }
+
+    /* Section Headers */
+    .pub-section-title {
+      margin-top: 48px;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--surface-tint);
+      color: var(--primary);
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    /* Streamlined Publication Card Design */
+    .pub {
+      background: var(--surface);
+      padding: 26px;
+      margin: 20px 0;
+      border-radius: var(--radius);
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .pub:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(75, 46, 46, 0.08);
+      border-color: var(--border);
+    }
+
+    .pub h3 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      color: var(--primary);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .pub p {
+      margin: 0;
+      font-size: .95rem;
+      color: var(--text-muted);
+    }
+
+    .pub-footer {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      text-decoration: none;
+      background: var(--surface-tint);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: .88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    .btn svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+      display: block;
+    }
+
+    .btn:hover {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .pub-tags {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .pub-year-tag {
+      background: var(--primary);
+      color: #FFFFFF;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .pub-acronym {
+      background: rgba(75, 46, 46, 0.07);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(75, 46, 46, 0.12);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 950px) {
+      nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+
+      .nav-links {
+        overflow-x: auto;
+        justify-content: flex-start;
+        border-radius: 12px;
+      }
+
+      .nav-links a {
+        flex: unset;
+        padding: 6px 14px;
+      }
+
+      .nav-immortalls {
+        justify-content: center;
+        border-radius: 12px;
+        padding: 10px;
+      }
+
+      .container {
+        margin: 24px auto;
+        padding: 0 16px;
+      }
+
+      .pub-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .pub-tags {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seamless Hero Banner -->
+  <div class="banner-wrapper">
+    <img src="page_files/Hepataug-banner.png" alt="Hepataug Header Banner">
+  </div>
+
+  <!-- Navigation with IMMORTALLS Companion Link -->
+  <header>
+    <nav>
+      <div class="nav-links">
+        <a href="hepataug.html">Home</a>
+        <a href="hepataug-publications.html" class="active">Publications</a>
+        <a href="hepataug-key-results.html">Key Results</a>
+        <a href="hepataug-people.html">People</a>
+        <a href="hepataug-partners.html">Partners</a>
+      </div>
+      
+      <!-- IMMORTALLS Project Link -->
+      <a href="immortalls.html" class="nav-immortalls">
+        <span>IMMORTALLS</span>
+        <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1 class="page-title">Publications</h1>
+    <p class="intro">Peer-reviewed publications from the Hepataug project.</p>
+    
+    <!-- Journal Articles Section -->
+    <h2 class="pub-section-title">Journal Articles</h2>
+
+    <article class="pub">
+      <h3>A Case Series Study of Augmented Reality in Liver Laparoscopic Resection with a Deformable Preoperative Model</h3>
+      <p>B. Le Roy, M. Abdallah, Y. Espinel, L. Calvet, B. Pereira, E. Ozgur, D. Pezet, E. Buc, A. Bartoli. </p>
+      <div class="pub-footer">
+        <div class="links">
+          <a class="btn pdf" href="./papers/surgical-endoscopy20.pdf" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span>PDF</span>
+          </a>
+        </div>
+        <div class="pub-tags">
+          <span class="pub-acronym">Surgical Endoscopy</span>
+          <span class="pub-year-tag">2020</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <h3>Combining Visual Cues with Interactions for 3D-2D Registration in Liver Laparoscopy</h3>
+      <p>Y. Espinel, E. Ozgur, L. Calvet, B. Le Roy, E. Buc, A. Bartoli. </p>
+      <div class="pub-footer">
+        <div class="links">
+          <a class="btn pdf" href="./papers/abme20.pdf" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span>PDF</span>
+          </a>
+        </div>
+        <div class="pub-tags">
+          <span class="pub-acronym">Annals of Biomedical Engineering</span>
+          <span class="pub-year-tag">2020</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <h3>Augmented Reality Guidance in Laparoscopic Hepatectomy with Deformable Semi-automatic Computed Tomography Alignment</h3>
+      <p>B. Le Roy, E. Ozgur, B. Koo, E. Buc, A. Bartoli. </p>
+      <div class="pub-footer">
+        <div class="links">
+          <a class="btn pdf" href="./papers/jvs19.pdf" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span>PDF</span>
+          </a>
+          <a class="btn video" href="https://www.youtube.com/watch?v=Lp0HtOYdZ7A" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            <span>Video</span>
+          </a>
+        </div>
+        <div class="pub-tags">
+          <span class="pub-acronym">Journal of Visceral Surgery</span>
+          <span class="pub-year-tag">2019</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <h3>Preoperative Liver Registration for Augmented Monocular Laparoscopy using Backward-Forward Biomechanical Simulation</h3>
+      <p>E. Ozgur, B. Koo, B. Le Roy, E. Buc, A. Bartoli. </p>
+      <div class="pub-footer">
+        <div class="links">
+          <a class="btn pdf" href="./papers/ijcars18.pdf" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span>PDF</span>
+          </a>
+        </div>
+        <div class="pub-tags">
+          <span class="pub-acronym">International Journal of Computer Assisted Radiology and Surgery - IJCARS</span>
+          <span class="pub-year-tag">2018</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <h3>Preliminary Trial of Augmented Reality Performed on a Laparoscopic Left Hepatectomy</h3>
+      <p>P. Phutane, E. Buc, K. Poirot, E. Ozgur, D. Pezet, A. Bartoli, B. Le Roy. </p>
+      <div class="pub-footer">
+        <div class="links">
+          <a class="btn pdf" href="./papers/surgical-endoscopy17.pdf" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span>PDF</span>
+          </a>
+        </div>
+        <div class="pub-tags">
+          <span class="pub-acronym">Surgical Endoscopy</span>
+          <span class="pub-year-tag">2017</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Conference Proceedings Section -->
+    <h2 class="pub-section-title">Conference Proceedings</h2>
+
+    <article class="pub">
+      <h3>Combining Visual Cues and Interactions for 3D-2D Registration in Liver Laparoscopy</h3>
+      <p>Y. Espinel, E. Ozgur, L. Calvet, B. Le Roy, E. Buc, A. Bartoli. </p>
+      <div class="pub-footer">
+        <div class="links">
+          <a class="btn pdf" href="./papers/ipcai19.pdf" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span>PDF</span>
+          </a>
+        </div>
+        <div class="pub-tags">
+          <span class="pub-acronym">IPCAI</span>
+          <span class="pub-year-tag">2019</span>
+        </div>
+      </div>
+    </article>
+    
+    <article class="pub">
+      <h3>Visualizing In-Organ Tumors in Augmented Monocular Laparoscopy</h3>
+      <p>E. Ozgur, A. Lafont, A. Bartoli. </p>
+      <div class="pub-footer">
+        <div class="links">
+          <a class="btn pdf" href="./papers/ismar17.pdf" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span>PDF</span>
+          </a>
+          <a class="btn video" href="./videos/ismar17-video.mp4" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            <span>Video</span>
+          </a>
+        </div>
+        <div class="pub-tags">
+          <span class="pub-acronym">ISMAR</span>
+          <span class="pub-year-tag">2017</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <h3>Deformable Registration of a Preoperative 3D Liver Volume to a Laparoscopy Image using Contour and Shading Cues</h3>
+      <p>B. Koo, E. Ozgur, B. Le Roy, E. Buc, A. Bartoli. </p>
+      <div class="pub-footer">
+        <div class="links">
+          <a class="btn pdf" href="./papers/miccai17.pdf" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span>PDF</span>
+          </a>
+        </div>
+        <div class="pub-tags">
+          <span class="pub-acronym">MICCAI</span>
+          <span class="pub-year-tag">2017</span>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+</body>
+</html>

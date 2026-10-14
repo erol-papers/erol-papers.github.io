@@ -31,7 +31,7 @@ background:white;
 border-bottom:1px solid #e5e5e5;
 padding:12px 18px;
 display:flex; 
-align-items: center; /* Add this line */
+align-items: center;
 gap:24px;
 overflow-x:auto;
 max-width:1000px;
@@ -45,13 +45,43 @@ h1{margin:0;font-size:2rem;color:var(--primary);}
 nav a.active {opacity: 1; border-bottom: 2px solid var(--primary); padding-bottom: 2px;}
 
 .nav-logo {
-  margin-left: auto; /* This pushes the logo to the absolute right side */
+  margin-left: auto;
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 .nav-logo img {
-  height: 30px; /* You can change 30px to whatever size looks best for your header */
+  height: 30px;
   width: auto;
+}
+
+/* Visually appealing Hepataug Project Link */
+.nav-hepataug-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(75, 0, 42, 0.05);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(75, 0, 42, 0.12);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-hepataug-link:hover {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+}
+
+.nav-hepataug-link svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
 }
 
 /* Updated to allow absolute positioning for the badge */
@@ -105,7 +135,7 @@ border: 1px solid rgba(75, 0, 42, 0.12);
 font-family: 'Montserrat', sans-serif;
 font-size: 0.75rem;
 font-weight: 700;
-letter-spacing: 0.5px; /* Clean look for mixed-case lettering */
+letter-spacing: 0.5px;
 }
 
 @media (max-width:700px){
@@ -122,21 +152,24 @@ right: 14px;
 </head>
 <body>
 <div class="hero">
-<img src="page_files/immortalls-banner.png" alt="IMMORTALLS banner"  style="display:block; max-width:1000px; height:auto; margin:0 auto;">
+<img src="page_files/immortalls-banner.png" alt="IMMORTALLS banner" style="display:block; max-width:1000px; height:auto; margin:0 auto;">
 </div>
 
 <nav>
 <a href="immortalls.html">Home</a>
-<a href="publications.html"class="active">Publications</a>
-<a href="key-results.html" >Key Results</a>
+<a href="publications.html" class="active">Publications</a>
+<a href="key-results.html">Key Results</a>
 <a href="people.html">People</a>
 <a href="partners.html">Partners</a>
 
-
 <div class="nav-logo">
-<img src="page_files/logo-anr.jpg" alt="ANR Logo">
+  <!-- Smooth Hepataug Project Link -->
+  <a href="hepataug.html" class="nav-hepataug-link">
+    <span>Hepataug</span>
+    <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+  </a>
+  <img src="page_files/logo-anr.jpg" alt="ANR Logo">
 </div>
-
 </nav>
 
 <div class="container">
@@ -160,29 +193,6 @@ right: 14px;
 <span class="pub-acronym">ScyPoSe</span>
 </article>
 
-
-
-<!--
-<article class="pub">
-<h3>Laparoscopic Ultrasound Probe State Classification for Safe Maneuvering Assistance in Hepatic Procedures</h3>
-<p>A. Khalife, M. Alkhatib, E. Ozgur, E. Buc, B. Le Roy, Y. Mezouar, A. Bartoli. ,    
-    MICCAI 2026.</p>
-<div class="links">
-  <a class="btn pdf" href="./papers/miccai26.pdf" target="_blank">
-    <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-    <span>pdf</span>
-  </a>
-  <a class="btn video" href="./videos/miccai26-video.mp4" target="_blank">
-    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-    <span>video</span>
-  </a>
-</div>
-<span class="pub-acronym">ContactLUS</span>
-</article>
--->
-
-
-
 <article class="pub">
 <h3>Tumour-focused 3D-2D Registration in Liver Laparoscopy</h3>
 <p>M. Zohaib, E. Ozgur, M. Alkhatib, E. Buc, B. Le Roy, Y. Mezouar, A. Bartoli. International Journal of Computer Assisted Radiology and Surgery (IJCARS), special issue: selected papers from CARS, 2026.</p>
@@ -197,8 +207,7 @@ right: 14px;
 
 <article class="pub">
 <h3>Radiomics LUS Transformer for Liver Tumour Segmentation</h3>
-<p>A. Khalife, M. Alkhatib, E. Ozgur, E. Buc, B. Le Roy, Y. Mezouar, A. Bartoli.    
-    ISBI 2026.</p>
+<p>A. Khalife, M. Alkhatib, E. Ozgur, E. Buc, B. Le Roy, Y. Mezouar, A. Bartoli. ISBI 2026.</p>
 <div class="links">
   <a class="btn pdf" href="./papers/isbi26.pdf" target="_blank">
     <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
@@ -235,8 +244,7 @@ right: 14px;
 
 <article class="pub">
 <h3>Stronger Together: Registering Preoperative Imagery, LUS, and MIS Liver Images</h3>
-<p>M. M. Kalantari, E. Ozgur, M. Alkhatib, N. Rabbani, Y. Espinel, R. Modrzejewski, B. Le Roy, E. Buc, Y. Mezouar, A. Bartoli.  
-    MICCAI 2025.</p>
+<p>M. M. Kalantari, E. Ozgur, M. Alkhatib, N. Rabbani, Y. Espinel, R. Modrzejewski, B. Le Roy, E. Buc, Y. Mezouar, A. Bartoli. MICCAI 2025.</p>
 <div class="links">
   <a class="btn pdf" href="./papers/miccai25.pdf" target="_blank">
     <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
@@ -245,7 +253,6 @@ right: 14px;
 </div>
 <span class="pub-acronym">ST</span>
 </article>
-
 
 <article class="pub">
 <h3>Reconstructing a Sphere and the Camera Focal Length from a Single View by Fitting Planes</h3>
@@ -258,7 +265,6 @@ right: 14px;
 </div>
 <span class="pub-acronym">SpherOf</span>
 </article>
-
 
 <h2 class='year'>2024</h2>
 
@@ -296,8 +302,7 @@ right: 14px;
 
 <article class="pub">
 <h3>Markerless Ultrasound Probe Pose Estimation in Mini-Invasive Surgery</h3>
-<p>M.M. Kalantari, E. Ozgur, M. Alkhatib, E. Buc, B. Le Roy, R. Modrzejewski, Y. Mezouar, A. Bartoli. 
-    ICRA 2024.</p>
+<p>M.M. Kalantari, E. Ozgur, M. Alkhatib, E. Buc, B. Le Roy, R. Modrzejewski, Y. Mezouar, A. Bartoli. ICRA 2024.</p>
 <div class="links">
   <a class="btn pdf" href="./papers/ICRA24s.pdf" target="_blank">
     <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
